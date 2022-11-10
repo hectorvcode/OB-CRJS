@@ -32,7 +32,8 @@ class Greeting extends Component {
         );
     }
 
-    birthday = () => { 
+    birthday = () => {
+        //this.myAge ++;
         this.setState((prevState) => (
             {
                 age: prevState.age + 1
