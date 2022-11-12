@@ -6,21 +6,26 @@ const GreetingF = (props) => {
 
     // Intro a useState
     // const [variable, metodo para actualizarla] = useState(valor inicial)
-    const [age, setstate] = useState(29);
+    const [age, setage] = useState(29);
+
+    const birthday = () => {
+        // actualizamos el state
+        setage(age + 1)
+    }
 
     return (
         <div>
             <h1>
                 Hola! { props.name } desde componente funcional!
             </h1>
-            {/* <h2>
-                Tu edad es de: 
+            <h2>
+                Tu edad es de: { age }
             </h2>
             <div>
-                <button>
-
+                <button onClick={birthday}>
+                    Cumplir años
                 </button>
-            </div> */}
+            </div>
         </div>
     );
 };
